@@ -21,7 +21,7 @@ const flavortexts = [
 
 document.addEventListener('DOMContentLoaded', () => {
     const flavor = document.querySelector("#flavor");
-    flavor.innerHTML = '"' + flavortexts[Math.floor(Math.random() * flavortexts.length)] + '"';
+    //flavor.innerHTML = '"' + flavortexts[Math.floor(Math.random() * flavortexts.length)] + '"';
 });
 
 window.addEventListener('load', () => {
@@ -37,8 +37,8 @@ window.addEventListener('load', () => {
     ];
 
     const shadernames = {
-        "XfdSRs": "3D Perlin Noise",
-        "lfdSWS": "Infinite Squares"
+        "XfdSRs": "3D perlin noise",
+        "lfdSWS": "infinite squares"
     }
 
     var nextShaderTimeout;
@@ -54,14 +54,17 @@ window.addEventListener('load', () => {
         goToShadertoyButton.onclick = function() {
             window.open("https://www.shadertoy.com/view/" + shaderids[id]);
         };
-        goToShadertoyButton.innerHTML = "Current Shader: " + shadernames[shaderids[id]];
+        goToShadertoyButton.innerHTML = "current shader: " + shadernames[shaderids[id]];
 
         const nextShaderButton = document.getElementById("nextshaderbutton");
     
-        nextShaderButton.addEventListener('click', () => {
+        nextShaderButton.onclick = function() {
             var nextid = (id + 1) % shaderids.length;
             setShader(nextid);
-        });
+        };
+
+        const flavor = document.querySelector("#flavor");
+        flavor.innerHTML = '"' + flavortexts[Math.floor(Math.random() * flavortexts.length)] + '"';
 
         // go to next after 30s - make it cancelable
         if (typeof nextShaderTimeout !== 'undefined') {
