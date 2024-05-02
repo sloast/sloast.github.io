@@ -4,14 +4,16 @@ let textobj = null
 let currtext = ''
 let counter = 0
 let cursoractive = true
+let usecursor = false
+let running = true
 const cursor = '_'
 //const cursor = '&#x2588;'
 
 function typeletter() {
     if (textarr.length > 0) {
         currtext += textarr.shift()
-        textobj.innerHTML = currtext + cursor
-    } else {
+        textobj.innerHTML = currtext + ( usecursor ? cursor : '&nbsp;')
+    } else if (usecursor) {
         if (counter++ == 5) {
             cursoractive = !cursoractive
             textobj.innerHTML = currtext
@@ -19,6 +21,9 @@ function typeletter() {
             counter = 0
         }
         //typewriter.style.animation = 'blink-caret 1.5s step-end infinite'
+    } else {
+        running = false
+        clearInterval();
     }
 }
 
