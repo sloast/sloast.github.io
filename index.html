@@ -7,44 +7,41 @@
     <link rel="icon" type="image/x-icon" href="data/favicon.ico">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <!--<link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <script src='script.js'></script>
     <script src='typeanim.js'></script>
-    
+    <script src="https://cdn.tailwindcss.com"></script> <!-- wheeeeeee tailwind -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body style="margin: 0;">
     <header>
-        <p style="position:absolute; right:0;">&nbsp;&nbsp;[everything on this page was created by me]&nbsp;&nbsp;</p>
+        <p class="absolute right-0 p-4">&nbsp;[everything on this page was created by me]&nbsp;</p>
         <div class="buttons">
             <button class="btn btn-primary" type="button" onclick="window.location.href='game/'">snake</button><button class="btn btn-primary" type="button" onclick="window.location.href='https://github.com/sloast/'">github</button><button class="btn btn-primary" type="button" onclick="window.location.href='https://www.linkedin.com/in/sloast/'">linkedin</button>
             </div>
     </header>
     <div id="content" style="margin: 1rem">
-    <div id="centrebox" class="central-box box">
-        <h1 id="typewriter" class="central-title huge" dataid="typewriter-text">&nbsp;</h1>
-        
+        <div id="centrebox" class="central-box box">
+            <h1 id="typewriter" class="central-title huge" x-init="startTypewriter($el,'sloast.dev')">&nbsp;</h1>
+        </div>
+        <p id="flavor" class="central-flavor box central-box"></p> 
     </div>
 
-    <p id="flavor" class="central-flavor central-box" style=""></p> <data id="typewriter-text" value="sloast.dev"></data>
-
-  
-
+    <div id="info-box" class="box absolute left-0 bottom-12 m-2 p-3 transition-all opacity-90 hidden">
+        <div id="info-box-content" class="overflow-clip max-w-64 m-0 mb-2 transition-all">
+            <p>no description available.</p>
+        </div>
+        <button id="info-box-button" class="btn p-2 px-3 m-0 transition-all"><- hide</button>
     </div>
+
     <!-- <img id="monke" src="data/monke.gif" alt="monke"> -->
 
-    <div id="background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; margin: 0; padding: 0; overflow: clip;"></div>
+    <div id="background" class="absolute top-0 left-0 w-full h-full -z-20 p-0 m-0 overflow-clip"></div>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <!-- <script src="https://pixijs.download/release/pixi.js"></script>
-    <script src="node_modules/three/three.js"></script>
-    <script src="frag.glsl" id="shader" type="shader"></script>
-    <script src="background.js" type="module"></script> -->
-
-    <p style="color:white; position:absolute; bottom:0; right:0; margin:0; padding:0;">
+    <p class="text-white absolute bottom-0 right-0 m-0 p-0" >
         [if you can't see anything, make sure your browser supports WebGL.]
     </p>
 
-    <div id="shadercontrols" style="position: absolute; bottom: 0; left:0">
+    <div id="shadercontrols" class="absolute bottom-0 left-0">
         <button id="shadertoybutton" class="btn btn-primary" type="button">view on shadertoy</button><button id="nextshaderbutton" class="btn btn-primary" type="button">next shader</button><!--<div class="form-check form-switch btn">
             <input id="auto-advance-check" class="form-check-input" type="checkbox" id="autoadvance" checked>
             <label class="form-check-label" for="autoadvance">Auto-advance</label>
