@@ -33,6 +33,8 @@ const flavortexts = [
     "try clicking somewhere on the screen!",
     "undefined",
     "how do i center a div",
+    "jibbletastic",
+    "have you tried rewriting it in rust?",
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -146,6 +148,7 @@ window.addEventListener('load', () => {
         infoboxbutton.innerHTML = infoboxshown ? '<- hide' : '<- ʍoɥs';
     }
 
-    setShader(Math.floor(Math.random() * shaders.length));
+    setShader(0);
+    // setShader(Math.floor(Math.random() * shaders.length));
 
 });
