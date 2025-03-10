@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Hello there -->
 <html>
+
 <head>
     <meta charset='utf-8'>
     <title>🦕🦕 adams page</title>
@@ -12,18 +13,24 @@
     <script src="https://cdn.tailwindcss.com"></script> <!-- wheeeeeee tailwind -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body style="margin: 0;">
     <header>
-        <p class="absolute right-0 p-4">&nbsp;[everything on this page was created by me]&nbsp;</p>
+        <p class="absolute right-0 p-4">&nbsp;[ made by human ]&nbsp;</p>
         <div class="buttons">
-            <button class="btn btn-primary" type="button" onclick="window.location.href='game/'">snake</button><button class="btn btn-primary" type="button" onclick="window.location.href='https://github.com/sloast/'">github</button><button class="btn btn-primary" type="button" onclick="window.location.href='https://www.linkedin.com/in/sloast/'">linkedin</button>
-            </div>
+            <button class="btn btn-primary" type="button" onclick="window.location.href='game/'">snake</button><button
+                class="btn btn-primary" type="button"
+                onclick="window.location.href='https://github.com/sloast/'">github</button><button
+                class="btn btn-primary" type="button"
+                onclick="window.location.href='https://www.linkedin.com/in/sloast/'">linkedin</button><button
+                class="btn btn-primary" type="button" onclick="window.location.href='/cubu'">cubu</button>
+        </div>
     </header>
     <div id="content" style="margin: 1rem">
         <div id="centrebox" class="central-box box">
             <h1 id="typewriter" class="central-title huge" x-init="startTypewriter($el,'sloast.dev')">&nbsp;</h1>
         </div>
-        <p id="flavor" class="central-flavor box central-box"></p> 
+        <p id="flavor" class="central-flavor box central-box"></p>
     </div>
 
     <div id="info-box" class="box absolute left-0 bottom-12 m-2 p-3 transition-all opacity-90 hidden">
@@ -37,17 +44,19 @@
 
     <div id="background" class="absolute top-0 left-0 w-full h-full -z-20 p-0 m-0 overflow-clip"></div>
 
-    <p class="text-white absolute bottom-0 right-0 m-0 p-0" >
+    <p class="text-white absolute bottom-0 right-0 m-0 p-0">
         [if you can't see anything, make sure your browser supports WebGL.]
     </p>
 
     <div id="shadercontrols" class="absolute bottom-0 left-0">
-        <button id="shadertoybutton" class="btn btn-primary" type="button">view on shadertoy</button><button id="nextshaderbutton" class="btn btn-primary" type="button">next shader</button><!--<div class="form-check form-switch btn">
+        <button id="shadertoybutton" class="btn btn-primary" type="button">view on shadertoy</button><button
+            id="nextshaderbutton" class="btn btn-primary" type="button">next shader</button><!--<div class="form-check form-switch btn">
             <input id="auto-advance-check" class="form-check-input" type="checkbox" id="autoadvance" checked>
             <label class="form-check-label" for="autoadvance">Auto-advance</label>
         </div>-->
     </div>
-  
-    
+
+
 </body>
+
 </html>
