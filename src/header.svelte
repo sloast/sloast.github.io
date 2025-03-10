@@ -13,12 +13,7 @@
 <header
     class="sticky top-0 flex flex-row items-center justify-between border-b-gray-500 border-b-2 bg-gray-800 p-4 z-10 gap-4"
 >
-    <a
-        class="basis-0 grow min-w-[3em]"
-        href="https://vite.dev"
-        target="_blank"
-        rel="noreferrer"
-    >
+    <a class="basis-0 grow min-w-[3em]" href="https://sloast.dev">
         {#if wide}
             <img src={slogo_full} class="logo" alt="Sloast Logo" />
         {:else}
