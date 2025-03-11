@@ -1,44 +1,44 @@
 <script lang="ts">
-    let {
-        title,
-        background_image = null,
-        image = null,
-        href = null,
-        backdrop = null,
-        bg_style = "",
-        desc,
-    } = $props();
+	let {
+		title,
+		background_image = null,
+		image = null,
+		href = null,
+		backdrop = null,
+		bg_style = '',
+		desc
+	} = $props();
 
-    const toImageUrl = (processedImagePath: String) =>
-        `url('${processedImagePath.slice(1).replaceAll("\\", "/")}')`;
+	const toImageUrl = (processedImagePath: String) =>
+		`url('${processedImagePath.slice(1).replaceAll('\\', '/')}')`;
 </script>
 
-<a {href}>
-    <div
-        class="group relative flex h-full flex-col justify-stretch w-80 rounded-xl z-0 border-2 border-gray-400 bg-gray-900 transition-all duration-500 hover:shadow-[0_0_2em_#008236] hover:z-10 overflow-clip"
-    >
-        <div class="text-center align-middle bg-gray-900 py-1 grow-0">
-            <h2 class="text-2xl font-semibold">{title}</h2>
-        </div>
+<button
+	class="group relative z-0 flex w-80 flex-col justify-stretch overflow-clip rounded-xl border-2 border-gray-400 bg-gray-900 transition-all duration-500 hover:z-10 hover:shadow-[0_0_2em_#008236]"
+	onclick={() => {
+		window.location.href = href;
+	}}
+>
+	<div class="grow-0 bg-gray-900 py-1 text-center align-middle">
+		<h2 class="text-2xl font-semibold">{title}</h2>
+	</div>
 
-        <!-- {#if image}
+	<!-- {#if image}
             <img src={image} alt="" />
         {:else if background_image} -->
-        <!-- <div class="p-8"></div> -->
-        <!--{/if}-->
+	<!-- <div class="p-8"></div> -->
+	<!--{/if}-->
 
-        <div
-            class="relative flex flex-col justify-end items-stretch bg-no-repeat bg-gray-800 bg-cover bg-center overflow-clip grow rounded-xl"
-            style={(background_image
-                ? `background-image: ${toImageUrl(background_image)};`
-                : "") + bg_style}
-        >
-            {#if backdrop}{@render backdrop()}{/if}
-            <p
-                class="bg-black/25 p-4 grow-0 transition-all backdrop-blur-sm translate-y-full group-hover:translate-y-0 ease-out duration-200"
-            >
-                {@render desc()}
-            </p>
-        </div>
-    </div>
-</a>
+	<div
+		class="relative flex grow flex-col items-stretch justify-end overflow-clip rounded-xl bg-gray-800 bg-cover bg-center bg-no-repeat"
+		style={(background_image ? `background-image: ${toImageUrl(background_image)};` : '') +
+			bg_style}
+	>
+		{#if backdrop}{@render backdrop()}{/if}
+		<div
+			class="grow-0 translate-y-full bg-black/25 p-4 backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-y-0"
+		>
+			{@render desc()}
+		</div>
+	</div>
+</button>
