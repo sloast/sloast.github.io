@@ -27,7 +27,7 @@
         <a class="btn" type="button" href="https://www.linkedin.com/in/sloast/">
             linkedin
         </a>
-        <a class="btn" type="button" href="/cubu">cubu</a>
+        <!-- <a class="btn" type="button" href="/cubu">cubu</a> -->
     </div>
     {#if wide}
         <p class="basis-0 grow text-right min-w-[8em]">
