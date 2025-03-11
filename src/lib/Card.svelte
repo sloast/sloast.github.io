@@ -10,7 +10,7 @@
 	} = $props();
 
 	const toImageUrl = (processedImagePath: String) =>
-		`url('${processedImagePath.slice(1).replaceAll('\\', '/')}')`;
+		`url('${processedImagePath.replaceAll('\\', '/')}')`;
 </script>
 
 <button
