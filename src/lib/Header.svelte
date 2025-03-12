@@ -15,20 +15,22 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <header
-	class="sticky top-0 z-10 flex flex-row items-center justify-between gap-4 border-b-2 border-b-gray-500 bg-gray-800 p-4"
+	class="sticky top-0 z-10 flex grow-0 flex-row items-center justify-between gap-4 border-b-2 border-b-gray-500 bg-gray-800 p-4"
 >
-	<a class="min-w-[3em] grow basis-0" href="https://sloast.dev">
-		{#if wide}
-			<img src={slogo_full} class="logo" alt="Sloast Logo" />
-		{:else}
-			<img src={slogo} class="logo" alt="Sloast Logo" />
-		{/if}
-	</a>
+	<div class="flex min-w-[3em] grow basis-0">
+		<a href="/">
+			{#if wide}
+				<img src={slogo_full} class="logo" alt="Sloast Logo" />
+			{:else}
+				<img src={slogo} class="logo" alt="Sloast Logo" />
+			{/if}
+		</a>
+	</div>
 	<div class="flex flex-row flex-wrap justify-end gap-4">
 		<!-- <a class="btn" href="game/">snake</a> -->
-		<a class="btn" type="button" href="https://github.com/sloast/">github</a>
-		<a class="btn" type="button" href="https://www.linkedin.com/in/sloast/"> linkedin </a>
-		<!-- <a class="btn" type="button" href="/cubu">cubu</a> -->
+		<a class="btn" href="https://github.com/sloast/">github</a>
+		<a class="btn" href="https://www.linkedin.com/in/sloast/"> linkedin </a>
+		<!-- <a class="btn" href="/cubu">cubu</a> -->
 	</div>
 	{#if wide}
 		<p class="min-w-[8em] grow basis-0 text-right">&nbsp;[ made by human ]&nbsp;</p>

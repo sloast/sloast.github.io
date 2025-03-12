@@ -3,9 +3,10 @@
 	import sampleim from './assets/sampleim.png';
 	import cubu_disk from './assets/cubu_disk2.png';
 	import derail from './assets/derail.png';
+	import snake from './assets/snake.png';
 </script>
 
-<h2 class="pt-8 text-3xl font-semibold">projects</h2>
+<h2 class="pt-8 text-3xl font-semibold">recent projects</h2>
 <h3 class="text-l font-semibold text-gray-500">
 	hover for more info, and click to see the full thing
 </h3>
@@ -27,7 +28,7 @@
 	<Card title="shader art" href="https://www.shadertoy.com/profile/?show=shaders">
 		{#snippet desc()}
 			shader art is code that runs on your gpu to generate dynamic, interactive digital art.
-			examples are the visuals above and right here. i've uploaded a few to <a
+			examples are the visuals above and right here. i've written a few on <a
 				href="https://www.shadertoy.com/"
 				class="a">shadertoy</a
 			>.
@@ -46,6 +47,11 @@
 			</div>
 		{/snippet}
 	</Card>
+	<Card title="snake" href="/snake" background_image={snake}
+		>{#snippet desc()}
+			a little webgl snake game
+		{/snippet}</Card
+	>
 	<Card
 		title="derail valley mods"
 		href="https://next.nexusmods.com/profile/sloast/mods"
@@ -55,7 +61,7 @@
 		{#snippet desc()}
 			<p>
 				<a class="a" href="https://www.derailvalley.com/">derail valley</a>
-				is train simulation game by
+				is a train simulation game by
 				<a class="a" href="https://www.altfuture.gg/">altfuture</a>. my derail valley mods are
 				available on
 				<a class="a" href="https://github.com/sloast/">github</a>

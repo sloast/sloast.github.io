@@ -18,6 +18,11 @@
 	onclick={() => {
 		window.location.href = href;
 	}}
+	onauxclick={(ev) => {
+		if (ev.button === 1) {
+			window.open(href);
+		}
+	}}
 >
 	<div class="grow-0 bg-gray-900 py-1 text-center align-middle">
 		<h2 class="text-2xl font-semibold">{title}</h2>
