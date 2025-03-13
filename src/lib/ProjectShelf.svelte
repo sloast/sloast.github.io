@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Card from './Card.svelte';
-	import sampleim from './assets/sampleim.png';
+	import squares_shader from './assets/squares_shader.png';
 	import cubu_disk from './assets/cubu_disk2.png';
 	import derail from './assets/derail.png';
 	import snake from './assets/snake.png';
@@ -10,8 +10,8 @@
 <h3 class="text-l font-semibold text-gray-500">
 	hover for more info, and click to see the full thing
 </h3>
-<div class="flex flex-col items-stretch justify-center gap-4 py-4 md:flex-row md:flex-wrap">
-	<Card title="cubu" href="/cubu" background_image={cubu_disk}>
+<div class="flex flex-col items-stretch justify-center gap-4 p-4 md:flex-row md:flex-wrap">
+	<Card title="cubu" href="/cubu" image={cubu_disk}>
 		{#snippet desc()}
 			a project to create a unix-compatible block device where all the data is stored on rubik's
 			cubes. also has an interactive cube solver.
@@ -23,7 +23,11 @@
             optimiser.
         {/snippet}
     </Card> -->
-	<Card title="shader art" href="https://www.shadertoy.com/profile/?show=shaders">
+	<Card
+		title="shader art"
+		href="https://www.shadertoy.com/profile/?show=shaders"
+		image={squares_shader}
+	>
 		{#snippet desc()}
 			shader art is code that runs on your gpu to generate dynamic, interactive digital art.
 			examples are the visuals above and right here. i've written a few on <a
@@ -31,7 +35,7 @@
 				class="a">shadertoy</a
 			>.
 		{/snippet}
-		{#snippet backdrop()}
+		<!-- {#snippet backdrop()}
 			<div id="background" class="pointer-events-none absolute inset-0 my-[-50px]">
 				<iframe
 					src="https://www.shadertoy.com/embed/lfdSWS?gui=false&amp;t=10&amp;paused=false&amp;muted=true"
@@ -43,9 +47,9 @@
 					class="inset-0"
 				></iframe>
 			</div>
-		{/snippet}
+		{/snippet} -->
 	</Card>
-	<Card title="snake" href="/snake" background_image={snake}
+	<Card title="snake" href="/snake" image={snake}
 		>{#snippet desc()}
 			a little webgl snake game
 		{/snippet}</Card
@@ -53,7 +57,7 @@
 	<Card
 		title="derail valley mods"
 		href="https://next.nexusmods.com/profile/sloast/mods"
-		background_image={derail}
+		image={derail}
 		bg_style="background-position:top;"
 	>
 		{#snippet desc()}

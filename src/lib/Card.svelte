@@ -1,13 +1,5 @@
 <script lang="ts">
-	let {
-		title,
-		background_image = null,
-		image = null,
-		href = null,
-		backdrop = null,
-		bg_style = '',
-		desc
-	} = $props();
+	let { title, image = null, href = null, backdrop = null, bg_style = '', desc } = $props();
 
 	const toImageUrl = (processedImagePath: String) =>
 		`url('${processedImagePath.replaceAll('\\', '/')}')`;
@@ -36,8 +28,7 @@
 
 	<div
 		class="relative flex grow flex-col items-stretch justify-end overflow-clip rounded-xl bg-gray-800 bg-cover bg-center bg-no-repeat"
-		style={(background_image ? `background-image: ${toImageUrl(background_image)};` : '') +
-			bg_style}
+		style={(image ? `background-image: ${toImageUrl(image)};` : '') + bg_style}
 	>
 		{#if backdrop}{@render backdrop()}{/if}
 		<div
