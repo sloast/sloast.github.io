@@ -10,9 +10,7 @@
 <h3 class="text-l font-semibold text-gray-500">
 	hover for more info, and click to see the full thing
 </h3>
-<div
-	class="flex flex-col items-center justify-center gap-4 py-4 md:flex-row md:flex-wrap md:items-stretch"
->
+<div class="flex flex-col items-stretch justify-center gap-4 py-4 md:flex-row md:flex-wrap">
 	<Card title="cubu" href="/cubu" background_image={cubu_disk}>
 		{#snippet desc()}
 			a project to create a unix-compatible block device where all the data is stored on rubik's

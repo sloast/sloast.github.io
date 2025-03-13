@@ -14,7 +14,7 @@
 </script>
 
 <button
-	class="group relative z-0 flex w-80 flex-col justify-stretch overflow-clip rounded-xl border-2 border-gray-400 bg-gray-900 transition-all duration-500 hover:z-10 hover:shadow-[0_0_2em_#008236]"
+	class="group relative z-0 flex min-h-60 flex-col justify-stretch overflow-clip rounded-xl border-2 border-gray-400 bg-gray-900 transition-all duration-500 hover:z-10 hover:shadow-[0_0_2em_#008236] md:w-80"
 	onclick={() => {
 		window.location.href = href;
 	}}
@@ -41,7 +41,7 @@
 	>
 		{#if backdrop}{@render backdrop()}{/if}
 		<div
-			class="grow-0 translate-y-full bg-black/25 p-4 backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-y-0"
+			class="grow-0 bg-black/25 p-4 backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-y-0 md:translate-y-full"
 		>
 			{@render desc()}
 		</div>
