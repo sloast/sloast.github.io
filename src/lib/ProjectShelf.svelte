@@ -25,7 +25,7 @@
     </Card> -->
 	<Card
 		title="shader art"
-		href="https://www.shadertoy.com/profile/?show=shaders"
+		href="https://www.shadertoy.com/user/adaad"
 		image={squares_shader}
 	>
 		{#snippet desc()}
